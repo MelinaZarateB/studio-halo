@@ -348,21 +348,24 @@
   .areas-fotografia__main-image {
     aspect-ratio: 21 / 9;
   }
-  
+
   .areas-fotografia__title {
     font-size: 3rem;
   }
-  
+
   .areas-fotografia__thumbnail {
     width: 6rem;
     height: 6rem;
   }
-  
+
   .areas-fotografia__lightbox-nav--prev {
     left: 2rem;
   }
-  
+
   .areas-fotografia__lightbox-nav--next {
     right: 2rem;
+  }
+  .areas-fotografia__counter {
+    display: none;
   }
 }
