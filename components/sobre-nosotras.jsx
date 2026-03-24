@@ -44,7 +44,7 @@ export function SobreNosotras() {
 
             <div className="sobre-nosotras__description">
               <p>
-                Entre cafes, ideas sueltas y suenos compartidos, nacio la
+                Entre cafes, ideas sueltas y sueños compartidos, nacio la
                 necesidad de construir un lugar distinto: un espacio donde la
                 moda, el diseno y la fotografia se encuentren y se potencien.
               </p>
