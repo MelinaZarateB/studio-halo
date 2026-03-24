@@ -16,8 +16,14 @@
   transition: all 1s ease-out;
 }
 
-.materiales__header--visible { opacity: 1; transform: translateY(0); }
-.materiales__header--hidden { opacity: 0; transform: translateY(2rem); }
+.materiales__header--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.materiales__header--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
 
 .materiales__label {
   font-size: 0.875rem;
@@ -60,8 +66,14 @@
   transition: all 0.7s ease-out;
 }
 
-.materiales__mobile-item--visible { opacity: 1; transform: translateY(0); }
-.materiales__mobile-item--hidden { opacity: 0; transform: translateY(3rem); }
+.materiales__mobile-item--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.materiales__mobile-item--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
+}
 
 .materiales__mobile-image {
   width: 100%;
@@ -77,7 +89,12 @@
 .materiales__mobile-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(45, 42, 38, 0.8), rgba(45, 42, 38, 0.2), transparent);
+  background: linear-gradient(
+    to top,
+    rgba(45, 42, 38, 0.8),
+    rgba(45, 42, 38, 0.2),
+    transparent
+  );
   opacity: 0.6;
 }
 
@@ -109,11 +126,12 @@
   max-width: 64rem;
   margin: 0 auto;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     "fondos ambientacion ceramica"
-    "textiles naturales ceramica";
-  aspect-ratio: 16 / 9;
+    "textiles naturales ceramica"
+    "textiles naturales mobiliario";
+  aspect-ratio: 16 / 12;
 }
 
 .materiales__desktop-item {
@@ -124,14 +142,33 @@
   transition: all 0.7s ease-out;
 }
 
-.materiales__desktop-item--fondos { grid-area: fondos; }
-.materiales__desktop-item--textiles { grid-area: textiles; }
-.materiales__desktop-item--ambientacion { grid-area: ambientacion; }
-.materiales__desktop-item--naturales { grid-area: naturales; }
-.materiales__desktop-item--ceramica { grid-area: ceramica; }
+.materiales__desktop-item--fondos {
+  grid-area: fondos;
+}
+.materiales__desktop-item--textiles {
+  grid-area: textiles;
+}
+.materiales__desktop-item--ambientacion {
+  grid-area: ambientacion;
+}
+.materiales__desktop-item--naturales {
+  grid-area: naturales;
+}
+.materiales__desktop-item--ceramica {
+  grid-area: ceramica;
+}
+.materiales__desktop-item--mobiliario {
+  grid-area: mobiliario;
+}
 
-.materiales__desktop-item--visible { opacity: 1; transform: translateY(0); }
-.materiales__desktop-item--hidden { opacity: 0; transform: translateY(3rem); }
+.materiales__desktop-item--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.materiales__desktop-item--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
+}
 
 .materiales__desktop-image {
   width: 100%;
@@ -147,7 +184,12 @@
 .materiales__desktop-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(45, 42, 38, 0.8), rgba(45, 42, 38, 0.2), transparent);
+  background: linear-gradient(
+    to top,
+    rgba(45, 42, 38, 0.8),
+    rgba(45, 42, 38, 0.2),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -265,15 +307,15 @@
   .materiales {
     padding: 8rem 0;
   }
-  
+
   .materiales__title {
     font-size: 3.75rem;
   }
-  
+
   .materiales__mobile-grid {
     display: none;
   }
-  
+
   .materiales__desktop-grid {
     display: grid;
     gap: 1rem;

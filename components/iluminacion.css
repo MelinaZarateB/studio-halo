@@ -16,8 +16,14 @@
   transition: all 1s ease-out;
 }
 
-.iluminacion__header--visible { opacity: 1; transform: translateY(0); }
-.iluminacion__header--hidden { opacity: 0; transform: translateY(2rem); }
+.iluminacion__header--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.iluminacion__header--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
 
 .iluminacion__label {
   font-size: 0.875rem;
@@ -60,8 +66,14 @@
   transition: all 0.7s ease-out;
 }
 
-.iluminacion__mobile-item--visible { opacity: 1; transform: translateY(0); }
-.iluminacion__mobile-item--hidden { opacity: 0; transform: translateY(3rem); }
+.iluminacion__mobile-item--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.iluminacion__mobile-item--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
+}
 
 .iluminacion__mobile-image {
   width: 100%;
@@ -73,7 +85,12 @@
 .iluminacion__mobile-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(45, 42, 38, 0.8), rgba(45, 42, 38, 0.2), transparent);
+  background: linear-gradient(
+    to top,
+    rgba(45, 42, 38, 0.8),
+    rgba(45, 42, 38, 0.2),
+    transparent
+  );
   opacity: 0.6;
 }
 
@@ -120,13 +137,27 @@
   transition: all 0.7s ease-out;
 }
 
-.iluminacion__desktop-item--lampara { grid-area: lampara; }
-.iluminacion__desktop-item--natural { grid-area: natural; }
-.iluminacion__desktop-item--spots { grid-area: spots; }
-.iluminacion__desktop-item--softbox { grid-area: softbox; }
+.iluminacion__desktop-item--lampara {
+  grid-area: lampara;
+}
+.iluminacion__desktop-item--natural {
+  grid-area: natural;
+}
+.iluminacion__desktop-item--spots {
+  grid-area: spots;
+}
+.iluminacion__desktop-item--softbox {
+  grid-area: softbox;
+}
 
-.iluminacion__desktop-item--visible { opacity: 1; transform: translateY(0); }
-.iluminacion__desktop-item--hidden { opacity: 0; transform: translateY(3rem); }
+.iluminacion__desktop-item--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.iluminacion__desktop-item--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
+}
 
 .iluminacion__desktop-image {
   width: 100%;
@@ -142,7 +173,12 @@
 .iluminacion__desktop-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(45, 42, 38, 0.8), rgba(45, 42, 38, 0.2), transparent);
+  background: linear-gradient(
+    to top,
+    rgba(45, 42, 38, 0.8),
+    rgba(45, 42, 38, 0.2),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -260,15 +296,15 @@
   .iluminacion {
     padding: 8rem 0;
   }
-  
+
   .iluminacion__title {
     font-size: 3.75rem;
   }
-  
+
   .iluminacion__mobile-grid {
     display: none;
   }
-  
+
   .iluminacion__desktop-grid {
     display: grid;
     gap: 1rem;
