@@ -263,7 +263,11 @@
   font-size: 0.875rem;
   font-family: monospace;
 }
-
+@media (max-width: 768px) {
+  .areas-fotografia__counter {
+    display: none;
+  }
+}
 /* Lightbox */
 .areas-fotografia__lightbox {
   position: fixed;
@@ -364,8 +368,5 @@
 
   .areas-fotografia__lightbox-nav--next {
     right: 2rem;
-  }
-  .areas-fotografia__counter {
-    display: none;
   }
 }
