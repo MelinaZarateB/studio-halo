@@ -1,0 +1,238 @@
+/* Tabla Precios Component Styles */
+.tabla-precios {
+  padding: 6rem 1.5rem;
+  background: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.tabla-precios__bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+}
+
+.tabla-precios__bg-circle-1 {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(166, 139, 106, 0.1);
+  border-radius: 50%;
+  filter: blur(48px);
+}
+
+.tabla-precios__bg-circle-2 {
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+  width: 24rem;
+  height: 24rem;
+  background: var(--secondary);
+  border-radius: 50%;
+  filter: blur(48px);
+}
+
+.tabla-precios__container {
+  max-width: 64rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tabla-precios__header {
+  text-align: center;
+  margin-bottom: 4rem;
+  transition: all 0.6s ease-out;
+}
+
+.tabla-precios__header--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tabla-precios__header--hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.tabla-precios__label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+.tabla-precios__title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.tabla-precios__line {
+  width: 4rem;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto;
+}
+
+/* Grid */
+.tabla-precios__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Card */
+.tabla-precios__card {
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tabla-precios__card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tabla-precios__card--hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+
+
+.tabla-precios__card-inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  height: 100%;
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition: all 0.5s ease-out;
+}
+
+.tabla-precios__card:hover .tabla-precios__card-inner {
+  border-color: rgba(166, 139, 106, 0.5);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.tabla-precios__card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(166, 139, 106, 0.05), transparent, transparent);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tabla-precios__card:hover .tabla-precios__card-gradient {
+  opacity: 1;
+}
+
+
+
+.tabla-precios__card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: var(--secondary);
+  color: var(--muted-foreground);
+  transition: all 0.3s;
+}
+
+.tabla-precios__card:hover .tabla-precios__card-icon {
+  transform: scale(1.1);
+  background: rgba(166, 139, 106, 0.1);
+  color: var(--accent);
+}
+
+
+
+.tabla-precios__card-duration {
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-family: var(--font-serif);
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+
+
+
+.tabla-precios__card-desc {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+
+
+.tabla-precios__card-price {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+}
+
+
+
+.tabla-precios__card-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.25rem;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.5s ease-out;
+}
+
+.tabla-precios__card:hover .tabla-precios__card-accent {
+  width: 100%;
+}
+
+
+
+/* Footer */
+.tabla-precios__footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 3rem;
+  transition: opacity 0.6s;
+  transition-delay: 0.6s;
+}
+
+.tabla-precios__footer--visible {
+  opacity: 1;
+}
+
+.tabla-precios__footer--hidden {
+  opacity: 0;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .tabla-precios__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .tabla-precios__title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tabla-precios__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}

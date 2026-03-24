@@ -1,0 +1,168 @@
+/* Propuesta Mobiliario Component Styles */
+.propuesta-mobiliario {
+  position: relative;
+  min-height: 100vh;
+  padding: 5rem 1rem;
+  overflow: hidden;
+}
+
+.propuesta-mobiliario__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.propuesta-mobiliario__container {
+  position: relative;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.propuesta-mobiliario__header {
+  margin-bottom: 4rem;
+  text-align: center;
+  transition: all 1s ease-out;
+}
+
+.propuesta-mobiliario__header--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.propuesta-mobiliario__header--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.propuesta-mobiliario__label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.propuesta-mobiliario__title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+}
+
+.propuesta-mobiliario__line {
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  width: 4rem;
+  background: var(--accent);
+}
+
+.propuesta-mobiliario__description {
+  margin-top: 1.5rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+/* Cards Grid */
+.propuesta-mobiliario__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+/* Counter */
+.propuesta-mobiliario__counter {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: all 1s ease-out;
+  transition-delay: 0.7s;
+}
+
+.propuesta-mobiliario__counter--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.propuesta-mobiliario__counter--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.propuesta-mobiliario__counter-item {
+  text-align: center;
+}
+
+.propuesta-mobiliario__counter-number {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.propuesta-mobiliario__counter-label {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.propuesta-mobiliario__counter-divider {
+  height: 3rem;
+  width: 1px;
+  background: var(--border);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .propuesta-mobiliario {
+    padding: 8rem 2rem;
+  }
+  
+  .propuesta-mobiliario__header {
+    margin-bottom: 6rem;
+  }
+  
+  .propuesta-mobiliario__title {
+    font-size: 3rem;
+  }
+  
+  .propuesta-mobiliario__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .propuesta-mobiliario__counter {
+    margin-top: 6rem;
+    gap: 3rem;
+  }
+  
+  .propuesta-mobiliario__counter-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .propuesta-mobiliario {
+    padding: 8rem 4rem;
+  }
+  
+  .propuesta-mobiliario__title {
+    font-size: 3.75rem;
+  }
+}

@@ -1,0 +1,151 @@
+/* Mobiliario Card Component Styles */
+.mobiliario-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(218, 213, 206, 0.6);
+  background: var(--card);
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: cardSlideIn 0.7s ease-out forwards;
+}
+
+.mobiliario-card:hover {
+  border-color: rgba(166, 139, 106, 0.4);
+  box-shadow: 0 10px 15px -3px rgba(166, 139, 106, 0.05);
+}
+
+@keyframes cardSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobiliario-card__accent-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.5s ease-out;
+}
+
+.mobiliario-card:hover .mobiliario-card__accent-line {
+  width: 100%;
+}
+
+.mobiliario-card__content {
+  padding: 1.5rem;
+}
+
+.mobiliario-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mobiliario-card__number {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.mobiliario-card__category {
+  margin-top: 0.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+}
+
+.mobiliario-card__icon-wrapper {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  transition: all 0.5s;
+  color: var(--muted-foreground);
+}
+
+.mobiliario-card:hover .mobiliario-card__icon-wrapper {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-foreground);
+  transform: rotate(45deg);
+}
+
+.mobiliario-card__items {
+  border-top: 1px solid rgba(218, 213, 206, 0.5);
+}
+
+.mobiliario-card__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(218, 213, 206, 0.5);
+  transition: padding-left 0.3s;
+}
+
+.mobiliario-card__item:last-child {
+  border-bottom: none;
+}
+
+.mobiliario-card__item:hover {
+  padding-left: 0.5rem;
+}
+
+.mobiliario-card__item-icon {
+  display: flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: var(--secondary);
+  color: var(--muted-foreground);
+  transition: all 0.3s;
+}
+
+.mobiliario-card__item:hover .mobiliario-card__item-icon {
+  background: rgba(166, 139, 106, 0.1);
+  color: var(--accent);
+}
+
+.mobiliario-card__item-name {
+  font-size: 0.875rem;
+  color: rgba(45, 42, 38, 0.8);
+  transition: color 0.3s;
+}
+
+.mobiliario-card__item:hover .mobiliario-card__item-name {
+  color: var(--foreground);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .mobiliario-card__content {
+    padding: 2rem;
+  }
+  
+  .mobiliario-card__category {
+    font-size: 1.5rem;
+  }
+  
+  .mobiliario-card__item-name {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,222 @@
+.convivencia {
+  padding: 80px 0 100px;
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+.convivencia-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.convivencia-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.convivencia-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+}
+
+.convivencia-label-line {
+  width: 40px;
+  height: 1px;
+  background-color: var(--accent);
+}
+
+.convivencia-title {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--foreground);
+  margin-bottom: 16px;
+}
+
+.convivencia-subtitle {
+  color: var(--muted-foreground);
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Rules Grid */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Rule Card */
+.rule-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.rule-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rule-icon-container {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary);
+  color: var(--foreground);
+  opacity: 0.6;
+  transition: all 0.5s ease;
+  flex-shrink: 0;
+}
+
+.rule-card:hover .rule-icon-container {
+  background-color: var(--muted);
+  color: var(--foreground);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.rule-card.special .rule-icon-container {
+  background-color: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
+}
+
+.rule-card.special:hover .rule-icon-container {
+  background-color: rgba(var(--accent-rgb), 0.2);
+  color: var(--accent);
+}
+
+.rule-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transform: scale(1);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.rule-card:hover .rule-ring {
+  border-color: rgba(var(--accent-rgb), 0.4);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.rule-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.rule-title {
+  margin-top: 12px;
+  max-width: 120px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.rule-card:hover .rule-title {
+  color: var(--accent);
+}
+
+.rule-description {
+  display: none;
+  margin-top: 8px;
+  max-width: 200px;
+  font-size: 12px;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.rule-card:hover .rule-description {
+  opacity: 1;
+}
+
+/* Footer message */
+.convivencia-footer {
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition-delay: 0.8s;
+}
+
+.convivencia-footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.convivencia-footer-text {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--muted-foreground);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .convivencia {
+    padding: 100px 0 120px;
+  }
+
+  .convivencia-title {
+    font-size: 48px;
+  }
+
+  .rules-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  .rule-icon-container {
+    width: 96px;
+    height: 96px;
+  }
+
+  .rule-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .rule-title {
+    margin-top: 20px;
+    max-width: 180px;
+    font-size: 14px;
+  }
+
+  .rule-description {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .convivencia-header {
+    margin-bottom: 80px;
+  }
+}
